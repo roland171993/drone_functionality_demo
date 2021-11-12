@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="demoapp.MapActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        >
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <include layout="@layout/map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context = ".MapActivity"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:visibility="invisible"
+        android:id="@+id/calculationCoodLayout"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <include layout="@layout/measure_area_calculations"-->
+<!--            tools:context=".MapActivity"/>-->
+
+        <ImageView
+            android:id="@+id/imgView"
+            android:src="@color/colorPrimaryDark"
+            android:background="@color/colorPrimaryDark"
+            android:layout_gravity="start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <include layout="@layout/log_view"
+        tools:context=".MapActivity"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorMenu"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_height="70dp">
+        <include layout="@layout/measure_auto"
+            tools:context=".MapActivity"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
